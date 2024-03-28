@@ -3,7 +3,7 @@ using namespace std;
 
 //Array of integers to hold values
 int arr[20];
-int cmb_count = 0; //number of comparasion
+int cmp_count = 0; //number of comparasion
 int mov_count = 0; //number of data movements
 int n;
 
@@ -55,5 +55,9 @@ void q_short( int low,int high)
     {
         //search for an element greater than pivot
         while  ((arr[i] <= pivot) && ( i <=high)) //step 5
+        {
+            i++; //step6
+            cmp_count++;
+        }
     }
 }
